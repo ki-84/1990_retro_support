@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retro Camera 1960 — Support &amp; Privacy</title>
+<meta name="description" content="Support and privacy policy for Retro Camera 1960, a film-simulation camera app for iPhone.">
+<style>
+  :root {
+    --bg: #eef0e6;
+    --surface: #ffffff;
+    --surface-2: #e2e6d6;
+    --ink: #1c2016;
+    --ink-dim: #565f4a;
+    --accent: #a8631a;
+    --line: rgba(28,32,22,0.14);
+    --shadow: 0 1px 2px rgba(28,32,22,0.06), 0 8px 24px rgba(28,32,22,0.05);
+    --radius: 12px;
+    --font-display: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+    --font-body: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171a13;
+      --surface: #1f2318;
+      --surface-2: #262b1c;
+      --ink: #eceee2;
+      --ink-dim: #a3ab8f;
+      --accent: #e8a13d;
+      --line: rgba(236,238,226,0.12);
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 30px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #171a13; --surface: #1f2318; --surface-2: #262b1c;
+    --ink: #eceee2; --ink-dim: #a3ab8f; --accent: #e8a13d;
+    --line: rgba(236,238,226,0.12);
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 30px rgba(0,0,0,0.35);
+  }
+  :root[data-theme="light"] {
+    --bg: #eef0e6; --surface: #ffffff; --surface-2: #e2e6d6;
+    --ink: #1c2016; --ink-dim: #565f4a; --accent: #a8631a;
+    --line: rgba(28,32,22,0.14);
+    --shadow: 0 1px 2px rgba(28,32,22,0.06), 0 8px 24px rgba(28,32,22,0.05);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); }
+  .frame-strip {
+    height: 6px;
+    background: repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 16px);
+    opacity: 0.3;
+  }
+
+  header.hero {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 32px;
+  }
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 5vw, 36px);
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .hero p.lede {
+    color: var(--ink-dim);
+    max-width: 58ch;
+    margin: 0 0 22px;
+  }
+  nav.pillnav { display: flex; gap: 10px; flex-wrap: wrap; }
+  nav.pillnav a {
+    font-family: var(--font-display);
+    font-size: 12.5px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 7px 14px;
+  }
+  nav.pillnav a:hover { border-color: var(--accent); color: var(--accent); }
+
+  main { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+
+  section.card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 32px 32px 34px;
+    margin-bottom: 28px;
+    scroll-margin-top: 20px;
+  }
+  section.card .tag {
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  section.card h2 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+  section.card h3 {
+    font-size: 16px;
+    margin: 24px 0 6px;
+  }
+  section.card p { margin: 0 0 14px; }
+  section.card p:last-child { margin-bottom: 0; }
+  section.card ul { margin: 0 0 14px; padding-left: 1.2em; }
+  section.card li { margin-bottom: 6px; }
+
+  .faq-item { border-top: 1px solid var(--line); padding: 16px 0; }
+  .faq-item:first-child { border-top: none; padding-top: 0; }
+  .faq-item .q { font-weight: 600; margin: 0 0 6px; }
+  .faq-item .a { color: var(--ink-dim); margin: 0; }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    background: var(--accent);
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-top: 6px;
+  }
+  .cta:hover { filter: brightness(1.06); }
+
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 12px;
+    color: var(--ink-dim);
+    margin-bottom: 20px;
+  }
+
+  footer.foot {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+    color: var(--ink-dim);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="frame-strip"></div>
+
+<header class="hero">
+  <div class="eyebrow">Retro Camera 1960</div>
+  <h1>Support &amp; Privacy</h1>
+  <p class="lede">Retro Camera 1960 is a film-simulation camera app for iPhone. This page covers how to get help and how your data is handled.</p>
+  <nav class="pillnav">
+    <a href="#support">Support</a>
+    <a href="#privacy">Privacy Policy</a>
+  </nav>
+</header>
+
+<main>
+  <section class="card" id="support">
+    <div class="tag">Help</div>
+    <h2>Support</h2>
+    <p>Answers to common questions. If yours isn't here, use the contact form below.</p>
+
+    <div class="faq-item">
+      <p class="q">How do I change the film simulation?</p>
+      <p class="a">Tap the film badge at the top of the camera screen, or open Settings → Film, to browse and select from the available film profiles.</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">How do I save the unfiltered original photo along with the filtered one?</p>
+      <p class="a">Open Settings and turn on "Save original." Both the filtered photo and the unedited original will be saved to your photo library.</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">How do I add a date stamp to my photos?</p>
+      <p class="a">Open Settings and turn on "Date stamp." Every photo you take afterward will include the current date burned into the image.</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">Does the app add location data to my photos?</p>
+      <p class="a">Only if you grant location permission when prompted. You can review or revoke this anytime in iOS Settings → Privacy &amp; Security → Location Services → Retro Camera 1960.</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">Why do I see ads in the app?</p>
+      <p class="a">Ads support continued development of the app. All ads are requested as non-personalized — the app does not request tracking permission and does not build an advertising profile of you.</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">I found a bug, or have a feature request.</p>
+      <p class="a">Please use the contact form below with as much detail as possible (device model, iOS version, and steps to reproduce for bugs).</p>
+    </div>
+
+    <h3>Still need help?</h3>
+    <p>Send us a message and we'll get back to you.</p>
+    <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScWJMd7fVogErdmOV7sT0a3bYcG32_oTbLcS82iA59dsJfWkQ/viewform?usp=publish-editor" target="_blank" rel="noopener">Contact form ↗</a>
+  </section>
+
+  <section class="card" id="privacy">
+    <div class="tag">Legal</div>
+    <h2>Privacy Policy</h2>
+    <div class="meta-row">
+      <span>App: Retro Camera 1960</span>
+      <span>Last updated: July 2026</span>
+    </div>
+
+    <p>This policy explains what data Retro Camera 1960 ("the app") collects and how it is used. The app is developed and published as an independent iOS app.</p>
+
+    <h3>Photos</h3>
+    <p>Photos you capture are processed and saved directly to your device's photo library. The app does not upload your photos to any server, and we do not have access to them.</p>
+
+    <h3>Location data</h3>
+    <p>If you grant location permission, the app embeds GPS coordinates into the photo's EXIF metadata at the time of capture, for your own reference. This location data stays in the photo file on your device and is not transmitted to us. You can disable location access at any time in iOS Settings.</p>
+
+    <h3>Advertising</h3>
+    <p>The app displays banner ads using Google's Mobile Ads SDK (AdMob). All ad requests are configured as non-personalized, and the app does not show the App Tracking Transparency prompt or use your device's advertising identifier for tracking. Google's SDK may still process limited technical data — such as a device identifier, coarse (approximate) location, and diagnostic data — to serve and measure non-personalized ads and to keep the SDK functioning correctly. This processing is governed by Google's own policies:</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+      <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">How Google uses data from apps that use its services</a></li>
+    </ul>
+
+    <h3>Data we do not collect</h3>
+    <p>We do not operate any backend server for this app, and we do not collect account information, contact lists, or usage analytics beyond what is described above.</p>
+
+    <h3>Children's privacy</h3>
+    <p>The app is not directed at children and does not knowingly collect personal information from children.</p>
+
+    <h3>Changes to this policy</h3>
+    <p>We may update this policy from time to time. Changes will be posted on this page with an updated "Last updated" date.</p>
+
+    <h3>Contact</h3>
+    <p>Questions about this policy can be sent through the same contact form used for support.</p>
+    <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScWJMd7fVogErdmOV7sT0a3bYcG32_oTbLcS82iA59dsJfWkQ/viewform?usp=publish-editor" target="_blank" rel="noopener">Contact form ↗</a>
+  </section>
+</main>
+
+<footer class="foot">Retro Camera 1960 — Support &amp; Privacy Policy</footer>
+</body>
+</html>
