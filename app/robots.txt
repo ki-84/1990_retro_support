@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ki-84.github.io/1990_retro_support/app/sitemap.xml
